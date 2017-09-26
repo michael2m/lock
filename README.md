@@ -28,3 +28,34 @@ function do() {
     console.log(shared);
 })();
 ```
+
+Fixing code with race condition:
+```ts
+const lock = new Lock();
+
+async function do() {
+    const release = await lock.acquire();
+    const temp = shared;
+    return new Promise<void>(
+        resolve => setImmediate(
+            () => {
+                shared = temp + 1;
+                release();
+                resolve();
+            }
+        )
+    );
+}
+```
+
+General pattern for using lock:
+```ts
+const lock = new Lock();
+...
+const release = await lock.acquire();
+try {
+    ...
+} finally {
+    release();
+}
+```
