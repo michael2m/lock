@@ -1,0 +1,28 @@
+{
+  "name": "lock",
+  "version": "0.0.1",
+  "description": "Minimal asynchronous, promise-based locking.",
+  "author": "Michael Meijer",
+  "license": "MIT",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michael2m/lock"
+  },
+  "bugs": {
+    "url": "https://github.com/michael2m/lock/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.30"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "async",
+    "promise",
+    "lock"
+  ]
+}
