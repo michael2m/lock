@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.js.map": {"when": "$(basename)"},
+        "**/*.js": {"when": "$(basename).ts"},
+        "**/*.d.ts": {"when": "$(basename).ts"}
+    },
+
+    "tslint.configFile": "tslint.json"
+}
